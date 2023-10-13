@@ -6,7 +6,7 @@
     },
     "Tests": {
       "commandName": "DebugRoslynComponent",
-      "targetProject": "..\\..\\Tests\\Bnaya.TypePatterns.Generators.Playground.Tests\\Bnaya.TypePatterns.Generators.Playground.Tests.csproj"
+      "targetProject": "..\\Bnaya.TypePatterns.Generators.Playground.Tests\\Bnaya.TypePatterns.Generators.Playground.Tests.csproj"
     }
   }
 }
