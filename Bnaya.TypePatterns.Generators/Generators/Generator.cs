@@ -57,7 +57,7 @@ public partial class Generator : AttributeGeneratorBase
 
         var tSyntax = typeSymbol.ToSyntaxNode<TypeDeclarationSyntax>(compilation, cancellationToken);
         var additionType = typeSymbol.IsRecord && typeSymbol.TypeKind == TypeKind.Struct ? " struct" : string.Empty;
-
+        
         yield return Decorate(GenerateNullableBuilder());
         yield return Decorate(GeneratePartialClass());
 
@@ -119,7 +119,9 @@ public partial class Generator : AttributeGeneratorBase
 
             foreach (var member in props)
             {
-                builder.AppendLine($"\tpublic {member.Type}? {member.Name}{{ get; init }}");
+                bool isNullable = member.Type.NullableAnnotation == NullableAnnotation.Annotated;
+                string nullableChar = isNullable ? string.Empty : "?";
+                builder.AppendLine($"\tpublic {member.Type}{nullableChar} {member.Name}{{ get; init; }}");
             }
 
             builder.AppendLine("}");

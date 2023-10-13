@@ -2,5 +2,5 @@
 
 
 namespace Bnaya.TypePatterns.Generators.Playground;
-[Omit]
+[Partial]
 public partial record Rec1(int Value, string Name);

@@ -4,8 +4,8 @@ using Bnaya.TypePatterns.Generators;
 
 namespace Bnaya.TypePatterns.Generators.Playground;
 
-[Omit]
-public readonly partial record struct RecStruct1(int Value, string Name)
+[Partial]
+public readonly partial record struct RecStruct1(int? Value, string Name)
 {
     public required int Quantity { get; init; }
     public string Tag { get; init; } = string.Empty;
