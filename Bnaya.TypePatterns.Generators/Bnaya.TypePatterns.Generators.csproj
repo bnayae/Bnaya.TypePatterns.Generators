@@ -24,8 +24,8 @@
 		<IncludeSymbols>False</IncludeSymbols>
 		<GenerateDocumentationFile>False</GenerateDocumentationFile>
 		<EnableNETAnalyzers>True</EnableNETAnalyzers>
-		<AssemblyName>Bnaya.TypePatterns.Generators.Generators</AssemblyName>
-		<Title>Builder Pattern Generator</Title>
+		<AssemblyName>Bnaya.TypePatterns.Generators</AssemblyName>
+		<Title>Type Pattern Generators</Title>
 		<PackageReadmeFile>ReadMe.md</PackageReadmeFile>
 	</PropertyGroup>
 
